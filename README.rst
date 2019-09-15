@@ -1,4 +1,6 @@
-# VerificationBot
+VerificationBot
+===============
+
 A Discord Verification Bot for python.
  
 Installing
