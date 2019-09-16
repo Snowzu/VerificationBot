@@ -29,11 +29,11 @@ async def verify(ctx):
         e = discord.Embed(color=0x7289da)
         e.add_field(name='Please complete the captcha below to gain access to the server.',
                     value='**NOTE:** This is **Case and Space Sensitive**')
-        e.set_image(url='https://cdn.discordapp.com/attachments/558818895868198913/605614132959379471/captcha.png')
+        e.set_image(url='CAPTCHA_DISCORD_URL')
         await ctx.author.send(embed=e)
 
         def check(m):
-            return m.content == 'aHr vE'
+            return m.content == 'CAPTCHA_RESPONSE'
 
         msg = await client.wait_for('message', check=check)
         e = discord.Embed(color=0x7289da)
