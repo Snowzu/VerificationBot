@@ -1,13 +1,16 @@
 import discord
 from discord.ext import commands
 
+# Put your prefered prefix
 client = commands.Bot(command_prefix='YOUR_PREFIX_HERE')
 
+# Logging into the bot
 @client.event
 async def on_ready():
     print(f'Logged in as {client.user}.\n-----------')
-    
 
+
+# When a new member joins, a role will be given to them.
 @client.event
 async def on_member_join(member):
     unverified = discord.utils.get(member.guild.roles, name="UNVERIFIED_ROLE_NAME_HERE")
@@ -18,6 +21,7 @@ def is_channel(ctx):
     return ctx.channel.id == VERIFICATION_CHANNEL_ID
 
 
+# Command to verify a user.
 @client.command()
 @commands.check(is_channel)
 async def verify(ctx):
