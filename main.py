@@ -10,8 +10,8 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-    unverified = discord.utils.get(member.guild.roles, name="UNVERIFIED_ROLE_NAME_HERE")
-    await member.add_roles(unverified)
+    unverified = discord.utils.get(member.guild.roles, name="UNVERIFIED_ROLE_NAME_HERE") #finds the unverified role in the guild
+    await member.add_roles(unverified) #adds the unverified role to the member
     
 
 def is_channel(ctx):
@@ -19,11 +19,11 @@ def is_channel(ctx):
 
 
 @client.command()
-@commands.check(is_channel)
+@commands.check(is_channel) # checks if the channel the command is being used in is the verifiy channel
 async def verify(ctx):
-    unverified = discord.utils.get(ctx.guild.roles, name="UNVERIFIED_ROLE_NAME_HERE")
-    if unverified in ctx.author.roles:
-        verify = discord.utils.get(ctx.guild.roles, name="VERIFIED_ROLE_NAME_HERE")
+    unverified = discord.utils.get(ctx.guild.roles, name="UNVERIFIED_ROLE_NAME_HERE") #finds the unverified role in the guild
+    if unverified in ctx.author.roles: #checks if the user running the command has the unveirifed role
+        verify = discord.utils.get(ctx.guild.roles, name="VERIFIED_ROLE_NAME_HERE") #finds the verified role in the guild
         msg = await ctx.send('Verification has been sent in DMs')
         await msg.add_reaction('✅')
         e = discord.Embed(color=0x7289da)
@@ -40,9 +40,9 @@ async def verify(ctx):
         await ctx.author.remove_roles(unverified)
         e.add_field(name='Thank you for verifying!', value='You now have access to the server.')
         await ctx.author.send(embed=e)
-        await ctx.author.add_roles(verify)
+        await ctx.author.add_roles(verify) #adds the verified role to the member
     else:
         await ctx.send('You are already verified!')
         
         
-client.run('YOUR_TOKEN_HERE')
+client.run('YOUR_TOKEN_HERE') #runs the bot
