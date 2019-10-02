@@ -48,5 +48,6 @@ async def verify(ctx):
     else:
         await ctx.send('You are already verified!')
         
-        
+
+# Put your token here        
 client.run('YOUR_TOKEN_HERE')
