@@ -27,5 +27,5 @@ pip3 install --requirement requirements.txt
 
 ## \- Links
 
--   [Discord Server](https://discord.gg/r3sSKJJ)
+-   [Discord Server](https://discord.gg/s25at7n)
 
