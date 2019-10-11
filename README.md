@@ -22,7 +22,7 @@ or
 pip3 install --requirement requirements.txt
 ```
 
-## \- Links
+## \Links
 
 -   [Discord Server](https://discord.gg/s25at7n)
 
