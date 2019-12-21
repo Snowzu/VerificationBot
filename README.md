@@ -1,4 +1,4 @@
-# VerificationBot ![Version](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue?style=flat-square) ![Discord.py-Version](https://img.shields.io/badge/discord.py-1.2.4-blue?style=flat-square)
+# VerificationBot ![Version](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-blue?style=flat-square) ![Discord.py-Version](https://img.shields.io/badge/discord.py-1.2.5-blue?style=flat-square)
 
 A Discord Verification Bot for python.
 
