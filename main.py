@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 
 client = commands.Bot(command_prefix='YOUR_PREFIX_HERE')
+TOKEN = ('YOUR_TOKEN_HERE')
+
 
 @client.event
 async def on_ready():
@@ -45,4 +47,4 @@ async def verify(ctx):
         await ctx.send('You are already verified!')
         
         
-client.run('YOUR_TOKEN_HERE') #runs the bot
+client.run(TOKEN) #runs the bot
