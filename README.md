@@ -9,7 +9,7 @@ A Discord Verification Bot for python.
 
 ```markdown
 # Cloning
-git clone https://github.com/Snowzok/VerificationBot.git
+git clone https://github.com/Snowzzu/VerificationBot.git
 
 # Change directories
 cd VerificationBot
